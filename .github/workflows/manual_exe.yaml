@@ -5,7 +5,7 @@ on:
       greeting:                                 #入力された値を入れる変数名()
         type: string                            #変数のデータ型 stringなので文字列
         default: Hello                          #変数のデフォルト値
-        required: true                          #入力パラメータの必須フラグ。trueなら必須,falseなら必須じゃない
+        required: false                          #入力パラメータの必須フラグ。trueなら必須,falseなら必須じゃない
         descriptions: A cheerful Word           #descriptions なので概要
 
 jobs:
