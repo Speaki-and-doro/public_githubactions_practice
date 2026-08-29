@@ -1,9 +1,9 @@
 name: Contexts
 on: push
 jobs:
-  print:
+  print: 
   runs-on: ubuntu-latest
-  steps:
+  steps: 
     - run echo "${{ github.actor }}"
     - run echo "${{ github.head_ref }}"
     - run echo "${{ github.workspace }}"
