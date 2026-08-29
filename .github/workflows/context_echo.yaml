@@ -10,6 +10,6 @@ jobs:
       REPO: "${{ github.repository }}"
     steps: 
       - run: echo "${ACTOR}"
-      - run: echo "&{HEAD_REF}"
-      - run: echo "&{WORKSPACE}"
-      - run: echo "&{REPO}"
+      - run: echo "${HEAD_REF}"
+      - run: echo "${WORKSPACE}"
+      - run: echo "${REPO}"
