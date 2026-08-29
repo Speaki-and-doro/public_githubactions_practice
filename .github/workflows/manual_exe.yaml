@@ -7,7 +7,12 @@ on:
         default: Hello                          #変数のデフォルト値
         required: false                          #入力パラメータの必須フラグ。trueなら必須,falseなら必須じゃない
         descriptions: A cheerful Word           #descriptions なので概要
-
+      log-level:
+        type: choice #入力パラメータを特製の値に制限する
+        options: #実際に入力させる値の設定　VBAとかのcase文っぽい
+          - info
+          - warning
+          - error
 jobs:
   run:
     runs-on: ubuntu-latest
