@@ -1,11 +1,17 @@
-name: Contexts
+name: Contexts env variables
 on: push
 jobs:
   print: 
     runs-on: ubuntu-latest
+    env: 
+      ACTOR: "${{ github.actor }}"
+      HEAD_REF: "${{ github.head_ref }}"
+      WORKSPACE: "${{ github.workspace }}"
+      REPO: "${{ github.repository }}"
+      EVENT: "${{ github.event }}"
     steps: 
-      - run: echo "${{ github.actor }}"
-      - run: echo "${{ github.head_ref }}"
-      - run: echo "${{ github.workspace }}"
-      - run: echo "${{ github.repository }}"
-      - run: echo "${{ github.event }}"
+      - run: echo "${ACTOR}"
+      - run: echo "&{HEAD_REF}"
+      - run: echo "&{WORKSPACE}"
+      - run: echo "&{REPO}"
+      - run: echo "&{EVENT}"
