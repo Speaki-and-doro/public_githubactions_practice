@@ -8,10 +8,8 @@ jobs:
       HEAD_REF: "${{ github.head_ref }}"
       WORKSPACE: "${{ github.workspace }}"
       REPO: "${{ github.repository }}"
-      EV: "${{ github.event }}"
     steps: 
       - run: echo "${ACTOR}"
       - run: echo "&{HEAD_REF}"
       - run: echo "&{WORKSPACE}"
       - run: echo "&{REPO}"
-      - run: echo "&{EV}"
